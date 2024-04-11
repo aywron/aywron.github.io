@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<head>
+    <link rel="icon" type="image/x-icon" href="/schedule/a.png">
+    <title>Home</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #a7b4bf;
+      overflow-x: hidden;
+    }
+    body::-webkit-scrollbar {
+  display: none;
+}
+    
+  .dropbtn {
+    background-color: #163259;
+    color: white;
+    padding: 1%;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 70px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #7080ea; 
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #163259;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(24, 10, 56, 0.2);
+    z-index: 1;
+    border-bottom-left-radius: 20px; 
+  border-bottom-right-radius: 20px; 
+  }
+
+  .dropdown-content a {
+    color: rgb(255, 241, 241);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    
+  }
+
+  .dropdown-content a:hover {
+    background-color: #39359f;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+    
+  }
+.container {
+  background-color: #163259;
+  margin-right: 20%;
+  color: white;
+  font-size: 20px;
+  width: 100%;
+
+}
+  .menu-container {
+  display: flex;
+  background-color: #163259;
+  padding: 10px;
+justify-content: flex-end;
+
+}
+
+.menu-container > * {
+  padding: 3;
+}
+
+
+.flexbox {
+  background: linear-gradient(155deg, #163259, #163259, #163259);
+  width:25%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.container1 {
+  background-color: #163259;
+  color: white;
+  font-size: 28px;
+  width: 100%;
+  height: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.scrollable-items {
+  width: auto;
+      max-height: 700px;
+      overflow-y: auto;
+      margin-left: 40px; 
+      margin-right: 40px;
+      margin-top: 20px;
+      overflow-x: hidden;
+    }
+    .note {
+  width: 20%;
+      max-height: 20%;
+      overflow-y: auto;
+      margin-left: 40px; 
+      margin-right: 40px;
+      margin-top: 20px;
+      overflow-x: hidden;
+    }
+
+.scrollable-items::-webkit-scrollbar {
+  display: none;
+}
+
+    .scrollable-items img {
+      transition: transform 0.3s;
+    }
+
+    .scrollable-items img:hover {
+      transform: scale(1.1);
+    }
+
+    .scrollable-items img:hover::after {
+  opacity: 1;
+    }
+
+    .image-container:hover img {
+      transform: scale(1.1);
+    }
+
+    @keyframes fadeFromBelow {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gallery-item {
+  position: relative;
+  background-color: lightgray;
+  margin-right: 5px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+  width: 100%;
+  object-fit:fill;
+
+}
+
+.gallery-item:hover {
+  transform: scale(1.1);
+}
+
+.gallery-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .overlay {
+  opacity: 1;
+}
+
+.gallery-item .overlay-content {
+  text-align: center;
+}
+
+.gallery-item .overlay-content h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+.button-18 {
+  align-items: center;
+  background-color: #0A66C2;
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 480px;
+  min-height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+}
+
+.button-18:hover,
+.button-18:focus { 
+  background-color: #16437E;
+  color: #ffffff;
+}
+
+.button-18:active {
+  background: #09223b;
+  color: rgb(255, 255, 255, .7);
+}
+
+.button-18:disabled { 
+  cursor: not-allowed;
+  background: rgba(0, 0, 0, .08);
+  color: rgba(0, 0, 0, .3);
+}
+</style>
+</head>
+<body>
+
+<div class="menu-container">
+  <div class="container">
+    <h2>Los Banos Ward</h2>
+    <h4> Organization Planners</h4>
+  </div>
+  <a class="dropbtn" href="home.html">Home</a>
+  <a class="dropbtn" href="split.html">About</a>
+  <a class="dropbtn" href="nonadmin.php">Calendar</a>
+  <a class="dropbtn" href="login/index.php">Log in</a>
+
+  </div>
+  <div class="container1">
+    My Dashboard
+   
+     </div>
+     
+</div>
+</div>
+<div class="scrollable-items">  
+  <div class="gallery-item">
+    <a href="https://www.familysearch.org">
+      <img src="family-search-2.jpg" alt="aa" width="80%" height="250px" style="margin-top: 20px;">
+
+    <div class="overlay">
+    <div class="overlay-content">
+      <h3>Find your Anscestors</h3>
+      <p>Familysearch.org</p>
+    </div>
+  </div>
+</a>
+  </div>
+    <a href="https://www.churchofjesuschrist.org/study/come-follow-me">
+      <img src="cfm.png" alt="aa" width="35%" height="100%" style="margin-top: 20px;">
+    </a>
+      <a href="https://www.churchofjesuschrist.org/study/scriptures">
+        <img src="bom.jpg" alt="aa" width="26%" height="35%" style="margin-top: 20px; margin-left: 8%;">
+    </a>
+    <a href="http://localhost/schedule/notet1.php">
+      <img src="note.png" alt="aa" width="21%" height="25%" style="margin-top: 20px; margin-left: 8%;">
+    </a>
+
+   
+
+
+    </div>
+    
+  </div>
+</a>
+<div class="menu-container">
+  <div class="container1">
+    <h4> The Church of Jesus Christ of Latter-day Saints</h4>
+    
+  </div>
+  </div>
+
+
+</div>
+</body>
+</html>
+
