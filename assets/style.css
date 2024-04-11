@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    font-family: 'Poppins', sans-serif;
+    background-color: #c9b039;
+}
+
+body {
+    background-color: #e4e4c0 !important;
+    width: 100%;
+    height: 100%;
+}
+
+.main {
+    width: 95%;
+    margin: 30px !important;
+}
+
+.note-container {
+    font-family: 'Caveat', cursive;
+    font-size: 23px;
+    border-radius: 0px;
+    background: linear-gradient(145deg, #ffd41b, #c79f0d);
+    width: 270px;
+    min-width: 270px;
+    height: 300px;
+    margin: 13px;
+    cursor: pointer;
+}
+
+.note-modal {
+    background: linear-gradient(145deg, #ffd41b, #c79f0d) !important;
+    font-family: 'Caveat', cursive;
+    height: 550px;
+}
+
+.note-content {
+    margin: 40px 30px 30px 30px;
+    font-size: 20x;
+    font-family: 'Caveat', cursive !important;
+    height: 250px;
+}
+
+.view-note-content {
+    height: 400px;
+    width: 100%;
+    padding: 30px;
+}
+
+.view-note-content input, textarea {
+    background: transparent !important;  
+    font-size: 20px !important;
+    /* border: none; */
+}
+
+.note-modal-content {
+    height: 80%;
+}
